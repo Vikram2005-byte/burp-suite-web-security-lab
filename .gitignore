@@ -1,0 +1,45 @@
+# Local secrets and environment settings
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+secrets.*
+credentials.*
+*_token.txt
+*_cookie.txt
+
+# Burp project data and captures may contain credentials or personal data
+*.burp
+*.burpbackup
+*.har
+*.pcap
+*.pcapng
+captures/
+evidence-private/
+private-reports/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local development environments
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.idea/
+.vscode/
+
+# Do not commit locally downloaded installers or third-party loaders
+BurpSuite*.exe
+BurpSuite*.jar
+burploader*
