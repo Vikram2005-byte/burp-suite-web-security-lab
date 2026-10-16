@@ -39,7 +39,9 @@ __pycache__/
 .idea/
 .vscode/
 
-# Do not commit locally downloaded installers or third-party loaders
+# Do not commit proprietary software bundles, installers, or third-party loaders
 BurpSuite*.exe
 BurpSuite*.jar
+BurpBountyPro*
+BurpLoader*
 burploader*
