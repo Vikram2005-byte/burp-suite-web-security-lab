@@ -1,0 +1,46 @@
+name: Suggest a lab note
+description: Propose an educational note or improvement for an authorized lab
+title: "[Lab note]: "
+labels: ["documentation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not include credentials, session tokens, personal data, private targets, or confidential engagement evidence.
+  - type: input
+    id: topic
+    attributes:
+      label: Topic
+      description: What web security concept is the note about?
+      placeholder: "e.g. Access control"
+    validations:
+      required: true
+  - type: input
+    id: learning_resource
+    attributes:
+      label: Public lab/resource
+      description: Link to the official learning resource or authorized lab, if available.
+      placeholder: "https://portswigger.net/web-security/..."
+    validations:
+      required: false
+  - type: textarea
+    id: learning_objective
+    attributes:
+      label: Learning objective
+      description: What should a learner understand after reading the note?
+    validations:
+      required: true
+  - type: textarea
+    id: key_takeaways
+    attributes:
+      label: Key takeaways and remediation
+      description: Summarize the concept and include defensive guidance.
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety and privacy
+      options:
+        - label: This proposal uses an authorized lab or public learning resource and contains no secrets or private data.
+          required: true
